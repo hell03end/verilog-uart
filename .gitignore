@@ -1,0 +1,17 @@
+*tmp/
+*.tmp
+
+incremental_db/
+output_files/
+greybox_tmp/
+simulation/
+db/
+
+*.bak
+*.bdf
+*.bsf
+*.qip
+*.qsf
+*.qpf
+*.vwf
+*.qdf
