@@ -1,5 +1,3 @@
-`timescale 1 ns / 1 ps
-
 /*
  * Baud rate generator to divide {CLOCK_RATE} (internal board clock) into
  * a rx/tx {BAUD_RATE} pair with rx oversamples by 16x.

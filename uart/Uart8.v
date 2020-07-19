@@ -1,5 +1,3 @@
-`timescale 1 ns / 1 ps
-
 /*
  * Simple 8-bit UART realization.
  * Combine receiver, transmitter and baud rate generator.
