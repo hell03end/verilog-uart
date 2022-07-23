@@ -51,6 +51,7 @@ module Uart8Transmitter (
                 end
             end
             `STOP_BIT   : begin // Send out Stop bit (high)
+                out     <= 1'b1;
                 done    <= 1'b1;
                 data    <= 8'b0;
                 state   <= `IDLE;
