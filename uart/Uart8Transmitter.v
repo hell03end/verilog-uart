@@ -19,9 +19,6 @@ module Uart8Transmitter (
     reg [2:0] state  = `RESET;
     reg [7:0] data   = 8'b0; // to store a copy of input data
     reg [2:0] bitIdx = 3'b0; // for 8-bit data
-    reg [2:0] idx;
-
-    assign idx = bitIdx;
 
     always @(posedge clk) begin
         case (state)
@@ -45,7 +42,7 @@ module Uart8Transmitter (
                 state   <= `DATA_BITS;
             end
             `DATA_BITS  : begin // Wait 8 clock cycles for data bits to be sent
-                out     <= data[idx];
+                out     <= data[bitIdx];
                 if (&bitIdx) begin
                     bitIdx  <= 3'b0;
                     state   <= `STOP_BIT;
